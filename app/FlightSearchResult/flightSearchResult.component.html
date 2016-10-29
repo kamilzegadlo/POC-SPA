@@ -1,0 +1,12 @@
+<h1>
+  {{title}}
+</h1>
+
+<ul class="heroes">
+    <li *ngFor="let flight of flights">
+        <span class="badge">{{flight.id}}</span> 
+        <span class="badge">{{flight.departureDate}}</span> 
+        <span class="badge">{{flight.arrivalDate}}</span> 
+        <span class="badge">{{flight.price}}</span> 
+    </li>
+</ul>
