@@ -1,16 +1,14 @@
-import { browser, element, by } from 'protractor';
+import { EasyJet2017FrontEndPage } from './app.po';
 
-describe('QuickStart E2E Tests', function () {
+describe('easy-jet2017-front-end App', function() {
+  let page: EasyJet2017FrontEndPage;
 
-  let expectedMsg = 'My First Angular App';
-
-
-  beforeEach(function () {
-    browser.get('');
+  beforeEach(() => {
+    page = new EasyJet2017FrontEndPage();
   });
 
-  it('should display: ' + expectedMsg, function () {
-    expect(element(by.css('h1')).getText()).toEqual(expectedMsg);
+  it('should display message saying app works', () => {
+    page.navigateTo();
+    expect(page.getParagraphText()).toEqual('app works!');
   });
-
 });
